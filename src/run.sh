@@ -1,9 +1,10 @@
 #!/bin/sh
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-command="jupyter notebook -y --allow-root --no-browser --ip=0.0.0.0"
+command="jupyter lab --config="$SCRIPTPATH/jupyter_lab_config.py""
 
 if [ "$JUPYTER_NO_PASS" = "TRUE" ]; then
-    $command --NotebookApp.token='' --NotebookApp.password=''
+    $command --ServerApp.token=''
 else
     $command
 fi

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>jupyter</Name>
+  <Repository>tinynja/jupyter</Repository>
+  <Registry>https://hub.docker.com/r/tinynja/jupyter</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8888]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Tinynja/jupyter-notebook/master/images/jupyter-icon.png</Icon>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1720084874</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jupyter/</Config>
+  <Config Name="Webserver port" Target="8888" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8888</Config>
+  <Config Name="Disable Jupyter Notebook authentication" Target="JUPYTER_NO_PASS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
+  <Config Name="Nvidia GPU" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="UMAS" Target="UMAS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0000</Config>
+</Container>

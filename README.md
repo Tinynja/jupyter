@@ -1,5 +1,5 @@
 # Jupyter Notebook Docker Container
-This jupyter notebook docker container comes pre-installed with PyTorch (CUDA 11.8), and is based on Python 3.9 but it can be changed in the `Dockerfile` (don't use the `alpine` version of the Python base image). It has only been tested on an [UNRAID](https://unraid.net/) system, so you will probably have to make modifications regarding the NVIDIA runtime if you are not using UNRAID.
+This jupyter notebook docker container comes pre-installed with PyTorch (CUDA 12.1), and is based on Python 3.11 but it can be changed in the `Dockerfile` (don't use the `alpine` version of the Python base image). It has only been tested on an [UNRAID](https://unraid.net/) system, so you will probably have to make modifications regarding the NVIDIA runtime if you are not using UNRAID.
 
 ## Usage
 Please replace all user variables in the below command defined by <> with the correct values.
@@ -11,10 +11,12 @@ Please replace all user variables in the below command defined by <> with the co
 		-v <path for jupyter home>:/data \
 		-e JUPYTER_NO_PASS=<TRUE or FALSE> \
 		-e NVIDIA_VISIBLE_DEVICES=<Nvidia GPU UUID> \
-		-e UMASK=<umask for created files> \
+		-e UMAS=<umask for created files> \
 		-e PUID=<uid for user> \
 		-e PGID=<gid for user> \
 		tinynja/jupyter-notebook
+
+If running from UNRAID, use the `unraid-template.xml` file to make your life easier.
 
 ## Notes
 

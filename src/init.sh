@@ -21,4 +21,4 @@ umask $UMAS
 
 # Run the application as user $USER
 trap "echo INFO: Graceful shutdown successful." TERM
-su -c /usr/local/bin/run.sh $USER & wait
+su -c /app/run.sh $USER & wait
